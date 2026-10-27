@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+template <typename T>
+void mySwap(T &a, T &b)
+{
+    T temp = a;
+    a = b;
+    b = temp;
+}
+
+int main()
+{
+
+// Swapping Employee IDs
+int empl = 101, emp2 = 102;
+mySwap(empl, emp2);
+
+cout << "Employee IDs after swap; "
+    << empl << " " << emp2 << endl;
+
+// Swapping Room Numbers
+int rooml = 201, room2 = 205;
+mySwap(rooml, room2);
+
+cout << "Room Numbers after swap: "
+    << rooml << " " << room2 << endl;
+
+// Swapping Task priorities 
+float p1 = 1.5, p2 = 2.5;
+mySwap(p1, p2);
+
+cout << "Task Priorties after swap: "
+    <<p1 << " " << room2 << endl;
+
+return 0;
+}
