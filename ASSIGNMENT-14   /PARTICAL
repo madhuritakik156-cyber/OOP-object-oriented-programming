@@ -1,0 +1,51 @@
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+
+int main()
+{
+    int id;
+    string name;
+    float salary;
+
+    ofstream file("employee.txt", ios::app);
+
+    cout << "Enter Employee ID: ";
+    cin >> id;
+
+    cout << "Enter Employee Name: ";
+    cin >> ws;
+    getline(cin, name);
+    
+    cout << "Enter Employee Salary: ";
+    cin >> salary;
+
+    file << id << endl;
+    file << name << endl;
+    file << salary << endl;
+
+    file.close();
+
+    cout << "\nEmployee record saved successfully!" << endl;
+
+    ifstream readfile("employee.txt");
+
+    cout << "\nEmployee Records:" << endl;
+
+    while (readfile >> id)
+        {
+            readfile >> ws;
+            getline(readfile, name);
+            readfile >> salary;
+
+    cout << "\nEmployee ID: " << id;
+    cout << "\nEmployee Name: " << name;
+    cout << "\nEmployee Salary: " << salary << endl;
+}
+
+    readfile.close();
+
+    return 0;
+}
+
